@@ -11,7 +11,7 @@ const sampleData = [
 {title: 'Home in Albany', owner: 'Brad Stevens', raised: 2342, goal: 3000, image: 'home_2', about: 'We want to help the world, so seed my home!'}
 ]
 
-class Search extends React.Component {
+export default class Search extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -29,13 +29,14 @@ class Search extends React.Component {
     })
   }
   render() {
-    const searchView = this.state.view === 'search' ?  <div>
-          <SearchResults listings={sampleData} handleClick={this.handleClick.bind(this)}/>
-        </div> : null
-    const detailedView = this.state.view ==='detailedView' ? <DetailedView listing={this.state.clickedListing}/> : null
+    const searchView = this.state.view === 'search' &&
+      <SearchResults listings={sampleData} handleClick={this.handleClick.bind(this)}/>
+
+    const detailedView = this.state.view ==='detailedView' &&
+      <DetailedView listing={this.state.clickedListing}/>
 
     return (
-      <div>
+      <div className={`container`}>
       {searchView}
       {detailedView}
       </div>
@@ -43,4 +44,3 @@ class Search extends React.Component {
    }
 }
 
-ReactDOM.render(<Search />, document.getElementById('app'));

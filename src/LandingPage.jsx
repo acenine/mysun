@@ -15,10 +15,10 @@ export default class LandingPage extends React.Component {
     }
     return (
       <div className={`landing page container`}>
-        <div  className={`greeting`}>
+        <header  className={`greeting`}>
           <h1> Welcome to Suncellerate </h1>
           <h2> No roof? No Problem. </h2>
-        </div>
+        </header>
         <form className={`container`} onSubmit={this.handleSubmit.bind(this)}>
 
           <div className={`dropdown container`}>

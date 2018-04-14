@@ -22,8 +22,8 @@ class DetailedView extends React.Component {
        </form> : null
 
     return (
-      <div>
-      <img src={require(`../../dist/images/${this.props.listing.image}.jpg`)} />
+      <div className={`container`}>
+      <img src={require(`./${this.props.listing.image}.jpg`)} />
      <div> {this.props.listing.title}</div>
      <div>Owner: {this.props.listing.owner}</div>
      <div>{this.props.listing.about}</div>
