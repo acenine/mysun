@@ -40,7 +40,6 @@ export default class LandingPage extends React.Component {
     })
   }
   handleSubmit(event) {
-
     this.props.updateRoute(this.state.selected)
     event.preventDefault();
   }
