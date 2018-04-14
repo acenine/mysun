@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import SearchResults from './SearchResults.jsx'
 import DetailedView from './DetailedView.jsx'
 import image1 from './home_1.jpg'
@@ -43,4 +42,4 @@ class Search extends React.Component {
    }
 }
 
-ReactDOM.render(<Search />, document.getElementById('app'));
+export default Search;
