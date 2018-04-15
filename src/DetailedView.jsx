@@ -30,6 +30,7 @@ class DetailedView extends React.Component {
      <div>{this.props.listing.raised} raised </div>
      <div>{`${percentage}% of goal!`}</div>
      <button type="button" onClick={this.handleButtonClick.bind(this)}>Seed this project</button>
+       <p>&nbsp;</p>
      {inputField}
       </div>
       )
